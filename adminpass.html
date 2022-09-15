@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkLogin(){
+            var pass = document.getElementById("pass").value
+            var user = document.getElementById("user").value
+            var type = document.getElementById("type").value
+var AdminPass="ADM";
+var EmpPass = "Emp1";
+ if(type == "Admin" && pass == AdminPass){
+alert("Correct Password: You have Admin Access");
+ }else if (type == "Emp" && pass == EmpPass){
+    alert("Correct Password: You have employee Access");
+ }else{
+    alert("Unidentified User: Please, check and try again");
+ }            
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">Role-based Authentication</h1>
+    <div style="width: 500px; margin:auto; padding: 15px; box-shadow: 1px 2px 3px;">
+    
+    <form>
+        <p><input type="password" id="pass" placeholder="Type Your Password"></p>
+        <p><input type="text" id="user" placeholder="Type Your UserName"></p>
+        <p><select id="type">
+            <option value="">-- Select User Role --</option>
+            <option value="Admin">Manager</option>
+            <option value="Emp"> Employee</option>
+        </select></p>
+        <p><input type="button" id="btn" value="Check & Login" onclick="checkLogin()"></p>
+    </form>
+    </div>
+</body>
+</html>
